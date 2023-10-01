@@ -51,3 +51,38 @@ int sum(int a, int b)
     return a + b;
 }
 ```
+
+### Recursive Functions
+
+Recursive functions or Recursion is a process when a function calls a copy of itself to work on smaller problems.
+
+Base Case in Recursion:
+
+- The case at which the function doesn’t recur is called the base case.
+
+Recursive Case:
+
+- The instances where the function keeps calling itself to perform a subtask i.e. solving problem by dividing it in small parts, is called the recursive case.
+```C
+#include<stdio.h>int factorial(int number)
+{
+	if (number ==1 || number == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return number*factorial(number-1);	//Recursion of Function
+	}
+}
+
+int main()
+{
+	int num;
+	printf("Enter a no. :");
+	scanf(%d, &num);
+	printf("\nThe factorial of %d is %d", num, factorial(num));
+
+	return 0;
+}
+```
