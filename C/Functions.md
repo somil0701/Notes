@@ -14,7 +14,8 @@ Function is nothing but a group of code put together and given a name and it can
 - User defined Functions - Functions created by programmer to reduce complexity of a program i.e. these are the functions which are created by user or programmer.
 
 ```C
-#include <stdio.h>int sum(int a, int b);
+#include <stdio.h>
+int sum(int a, int b);
 void printstar(int n)
 {
     for(int i = 0; i < n; i++)
