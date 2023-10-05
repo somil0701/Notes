@@ -86,3 +86,46 @@ int main()
 	return 0;
 }
 ```
+
+## Types of Paramters
+- Formal Parameter: Formal Parameters are the local variable which are assigned values from the arguements when the function is called.
+- Actual Parameter: When a function is called, the values that are passed in the call are called arguments or actual parameters.
+
+## Call by Value
+In this function call, the changes made to the formal arguments in the called function have no effect on the values of actual arguments in the calling function.
+Actual and formal arguments will be created in a different memory location.
+```C
+void swap(int x, int y)
+{
+int temp;
+temp=x;
+x=y;
+y=temp;
+}
+void main()
+{ 
+int r=10, v=20; 
+swap(r, v);  // passing value to function
+printf("\nValue of r: %d",r);
+printf("\nValue of v: %d",v);
+} 
+```
+
+## Call by Reference
+In this method, the addresses of actual arguments in the calling function are copied into formal arguments of the called function. This means that using these addresses we could access the actual arguments and hence be able to manipulate them.
+```C
+void swap(int *x, int *y)
+{
+int temp;
+ temp=*x;
+*x=*y;
+*y=temp;
+}
+void main()
+{ 
+int r=10, v=20; 
+swap(&r, &v);  // passing value to function
+printf("\nValue of r: %d",r);
+printf("\nValue of v: %d",v);
+}
+```
