@@ -107,3 +107,68 @@ int main()
 
 - An array by default is a pointer itself that returns the address of it's first element(0th index)
 
+## Passing Arrays as Function Argument
+
+Declaration of a function with formal parameters
+`void myfunc (int arr[]){}`
+`void myfunc (int arr [3][3]){}`
+`void myfunc (int *ptr){}`
+
+- When we make a change in array using pointers in the functions, the actual array will also be affected.
+
+# Strings
+A string is a one-dimensional array of characters that is terminate by a null character (\'0')
+
+## Declaration of strings
+`char string_name[size];`
+`char name[] = {'S', 'T', 'R', 'I', 'N', 'G'};`
+`gets(str)`
+`printf("%s", str)`
+`puts(str)`
+
+- In order to take input a string that contains the spaces, we use the gets() function. The purpose it to ignore the whitespaces.
+
+
+```C
+#include <stdio.h>
+
+void printStr(char str[])
+{
+    int i=0;
+    while(str[i]!='\0')
+    {
+        printf("%c", str[i]);
+        i++;
+    }
+    printf("\n");
+}
+int main()
+{
+    char str[34];
+    gets(str);
+    printf("Using custom function printStr\n");
+    printStr(str);
+    printf("Using printf %s\n", str);
+    printf("using puts: \n");
+    puts(str);
+    return 0;
+}
+
+```
+
+## String Library(string.h)
+
+- strcat(t,s)
+This function is used to concatenate the source string at the end of the target
+
+- strcpy(t,s)
+This function is used to copy the contents of one string to another. The base address of the source and target strings should be given to this function.
+
+- strlen(str)
+This function is used to count the number of characters present in a string.
+
+- strcmp()
+This function is used to compare two strings to find out whether the are same or different. 
+
+- strrev()
+This function is used to show the reverse of the string.
