@@ -28,3 +28,12 @@ return 0;}
 - We can pass the structure variable to a function.(individual elements or entire structure variable)
 - We can have a pointer pointing to a strucut just like the way we can have a pointer pointing to an int or char.
 - Generally used to store a large amount of data.
+
+## Typedef
+A typedef is a keyword that is used to assign alternative names to existing datatypes.
+
+Following is the syntax for using typedef,
+`typedef <previous_name> <alias_name>`
+
+- Increases readibiliy of the code
+- Can be used with an multi-dimensional array or structures for portability.
