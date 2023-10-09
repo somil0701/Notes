@@ -37,3 +37,23 @@ Following is the syntax for using typedef,
 
 - Increases readibiliy of the code
 - Can be used with an multi-dimensional array or structures for portability.
+
+# Unions
+Just like structures, the union is a user-defined data type. All the members in union share the same memory location.
+
+Example:
+```C
+union books
+{
+    int pages;
+    float price;
+    char title[20];
+}b1;
+```
+This union contains three members each with a different data type. However, we can use only one of them at a time. This is because, only one location is allocated for all the union variables, irrespective of their size.
+
+## Difference b/w structures and unions
+
+- Individual members can be accessed at at ime in structure where as only one member can be accessed at a time in union.
+
+- Several members of a structure can be initialized at once, whereas only one member can be intialized in union.
