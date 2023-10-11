@@ -129,3 +129,14 @@ printf("\nValue of r: %d",r);
 printf("\nValue of v: %d",v);
 }
 ```
+
+## Static Variables
+A static variable is known to retain the value even after they exit the scope and are not intialized again in the new scope.
+`   static Datatype Variable_name = Variable_value;`
+
+Difference between static local and the static global variable
+- Static Global Variable
+If we declare the variable with a static keyword outside the function, then it is known as a static global variable. This variable will be accessible throughout the program.
+
+- Static Local variable
+The scope of the static local variable will be the same as the local variables, but its memory will be available throughout the execution of the program.
