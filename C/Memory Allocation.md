@@ -47,3 +47,30 @@ ptr = (int*) realloc(ptr, 5*sizeof(int))
 ## Free
 Free is used to free up the space occupied by the allocated memroy.
 `free(ptr)`
+
+# Storage Classes
+A storage class defines scope, default intial value, and a lifetime of a variable.
+There are four types of storage classes: 
+- Automatic Variables
+- External Variables
+- Static Variables
+- Register Variables
+
+## Auto Storage Class
+Variables being formed in a function and whose storage class has not been defined initially fall in this category automatically. Its scope is minimum as it can only be accessed inside the function it is intialized in. No other function can access it. It stores a garbage value by default. Their lifetime depends upon the function block's length.
+
+## External Storage Class
+These sorts of variables are defined outside the function, hence can be used inside any function, meaning that they can be used globally. Their intial value is set to 0. Their lifetime is equal to the lifetime of the program.
+
+- Extern Keyword
+Using the extern keyword, we inform our compiler that thae variable is already declared at some other place. By doin so, we can use the same variable with the same space, without allocating its new memory and accessing the same variable in some other file.
+`extern int a;`
+
+## Static Storage Class
+Static Variable's lifetime is througout the program, but their scope is limited to a function. Their intial default value is 0.
+`static int a;`
+
+## Register Storage Class
+It is very similar to the auto class as its scope is limited to the function. The intial default value is 0, and the lifetimes is till the end of the function block. 
+The major difference is that it requests the CPU's register memory instead of the local memory for fast access. It is usally used for the program that need to be accessed faster than the other.
+`register int a;`
