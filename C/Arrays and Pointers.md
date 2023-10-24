@@ -172,3 +172,25 @@ This function is used to compare two strings to find out whether the are same or
 
 - strrev()
 This function is used to show the reverse of the string.
+
+## Void Pointer
+Void Pointer has no reutrn type i.e., functions that are not returning anything are given the type void. So, in case of void pointers, they can be typecast into any data type whenever we want.
+Syntax
+```C
+int x = 1;
+void *ptr = &x;
+```
+
+- C does not allow void pointers to be dereferenced.
+- We cannot use pointer arithmetic with void pointers.
+
+## Null Pointer
+A NULL pointer is a pointer taht does not point to any memory location. It generally points to NULL or 0th memory location.
+
+Deferencing is same as in the case of null pointer wrt void pointer.
+Uninitialized pointer points to a garbage value by default where as null pointer points to the 0th address.
+
+`int *ptr = NULL;`
+`void *ptr;`
+
+Null Pointer is a value where as Void Pointer is a type.
