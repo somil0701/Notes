@@ -3,15 +3,17 @@
 #include <time.h>
 
 // Function To Generate a Random Number
-int generateRandomNumber(int limit){
-    int random_num; 
+int generateRandomNumber(int limit)
+{
+    int random_num;
     srand(time(0));
-    random_num = rand()%limit;
+    random_num = rand() % limit;
     return random_num;
 }
 
 // Function to Check the Victory Condition
-int checkVictory(char player, char cpu){
+int checkVictory(char player, char cpu)
+{
     if (player == 'r' && cpu == 'p')
         return 0;
 
@@ -23,7 +25,7 @@ int checkVictory(char player, char cpu){
 
     else if (player == 's' && cpu == 'r')
         return 0;
-    
+
     else if (player == 'p' && cpu == 'r')
         return 1;
 
@@ -34,47 +36,55 @@ int checkVictory(char player, char cpu){
         return 2;
 }
 
-int main(){
+int main()
+{
     // Taking User Input At The Start Of the Game
     char player_name[20];
     char dataset[] = {'r', 'p', 's'};
     char user_response, cpu_response;
     int random_num, vict;
+    int user_score = 0;
+
     printf("Greetings Player! Enter your name to get started: ");
     scanf("%s", &player_name);
     getchar();
 
-    printf("%s's Turn: \n", player_name);
-    printf("Enter Your Response(r/p/s): ");
-    scanf("%c", &user_response);
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%s's Turn: \n", player_name);
+        printf("Enter Your Response(r/p/s): ");
+        scanf("\n%c", &user_response);
 
-    // Generating CPU's Response
-    printf("Waiting for your opponent to respond....\n");
-    random_num = generateRandomNumber(3);
-    cpu_response = dataset[random_num];
+        // Generating CPU's Response
+        printf("Waiting for your opponent to respond....\n");
+        random_num = generateRandomNumber(3);
+        cpu_response = dataset[random_num];
 
-    printf("CPU's Response is %c\n", cpu_response);
+        printf("CPU's Response is %c\n", cpu_response);
 
-    // Checking Victory Condition
-    vict = checkVictory(user_response, cpu_response);
+        // Checking Victory Condition
+        vict = checkVictory(user_response, cpu_response);
 
-    switch(vict){
+        switch (vict)
+        {
         case 0:
-        printf("%s you lose!\n", player_name);
-        break;
+            printf("%s you lose!\n", player_name);
+            break;
 
         case 1:
-        printf("%s you won\n", player_name);
-        break;
+            printf("%s you won\n", player_name);
+            user_score++;
+            break;
 
         case 2:
-        printf("It was a Draw!\n");
-        break;
+            printf("It was a Draw!\n");
+            break;
 
         default:
-        printf("OwO\n");
-        break;
+            printf("OwO\n");
+            break;
+        }
+        printf("Your Score is: %d\n", user_score);
     }
-
     return 0;
 }
