@@ -194,3 +194,15 @@ Uninitialized pointer points to a garbage value by default where as null pointer
 `void *ptr;`
 
 Null Pointer is a value where as Void Pointer is a type.
+
+## Dangling Pointer
+Dangling pointers are pointers that are pointing to a memory location that has been freed or deleted.
+Examples- Deallocating or free variable memory, function call.
+
+## Wild Pointer
+Uninitialized pointers are known as wild pointers(void).
+
+For ex:
+`int *ptr`
+Here, we created a pointer but didn't give it any value, so it becomes a wild pointer.
+To avoid the bugs and errors it can cause in a program; we prefer to convert a void pointer to a NULL pointer.
