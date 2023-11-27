@@ -48,7 +48,22 @@ int main(){
     int limit = num1_rows*num2_columns;
 
     // Multiplication of both the Matrices
-     
+    for (int i = 0; i<num1_rows; i++){
+        for (int j = 0; j<num2_columns; j++){
+            for (int k = 0; k<num2_rows; k++){
+                new_matrix[i][j] += matrix1[i][k]*matrix2[k][j];
+            }
+        }
+    }     
+
+    // Printing the New Matrix
+    printf("The Multiplied Matrix will be given as followed: \n");
+    for (int i = 0; i<num1_rows; i++){
+        for (int j = 0; j<num2_columns; j++){
+            printf("%d ", new_matrix[i][j]);
+        }
+        printf("\n");
+    }
    
 
     return 0;
