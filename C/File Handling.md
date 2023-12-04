@@ -70,6 +70,16 @@ fscanf(ptr, "%s", str);
 printf("%s", str);
 ```
 
+- fgetc():
+It reads the character from the file. It reads only one character at a time.
+`type = fgetc(file_pointer);`
+`c = fgetc(ptr)`;
+
+- fgets():
+It is used to read a string from a file. It takes three parameters as input and stores them in a null terminated array.
+`int fgets(const char *s, int n, file_pointer);`
+`fgets(str, 5, ptr);`
+
 ## Writing to a File
 In order to write to a file, we can use the function fprintf(). We have to send the file pointer as argument for the program to be able to print it into the file.
 
@@ -78,3 +88,14 @@ char str[120] = "Empty";
 ptr = fopen("D:\\file.txt","w");
 fprintf(ptr, "%s", str);
 ```
+
+- fputc():
+It is used to write characters to the file. On successful implementation, it returns the character on to the screen. If it couldn't do so in case of any other issue, it would display an EOF(End of File) exception.
+
+`type fputc('character', file_pointer);`
+`int fputc('a', ptr);`
+
+- fputs():
+It is used to write a null-terminated string to the file.
+`fputs("string", file_pointer);`
+`fputs("somil_sama", ptr);`
