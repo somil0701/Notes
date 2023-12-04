@@ -167,3 +167,21 @@ int main()
     return 0;
 }
 ```
+
+## Command Line Arguments
+A command-utility is a way of giving operating system instructions using lines of texts. Command-line programs operate via command line or PowerShell.
+
+- argc:
+It represents the count for the arguments. The first argument countis reserved for the executable program's name, and the next ones are for the arguments passed to the program.
+
+- argv:
+Argv denotes vector argument. Argv stores the pointer to the arguemnts passed to the program in an array of strings.
+Note: argv does not store the actual argument, but the pointer to that argument.
+`xyz.ece a b`
+```C
+#include<stdio.h>
+int main(int argc, char const *argv[]){
+    printf("%d\n", argc);
+    return 0;
+}
+```
