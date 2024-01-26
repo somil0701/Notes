@@ -269,3 +269,66 @@ The expression is evaluated from left to right. The operator is `or`. Since the 
     >>> (not((3 > 2) or (5 / 0))) and (10 / 0)
     False
     ```
+
+## Errors and Exceptions
+
+### Errors
+```py
+print('123)
+```
+
+Output:
+```
+  File "main.py", line 1
+    print('123)
+              ^
+SyntaxError: EOL while scanning string literal
+```
+
+- The above lines represent an error message. It is the interpreter's way of warning us that there is something wrong with the code. In this case, we have a `SyntaxError`, i.e., something is wrong with the syntax.
+
+### Exceptions
+```py
+1/0
+```
+
+Output:
+```
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+```
+
+We are trying to divide by zero and the interpreter is rightly objecting to it. This is called a `Zero Division Error`.
+
+- Such Errors that are detected by the interpreter during the program's execution are called exceptions.
+
+```py
+1 + 'one'
+```
+
+Output:
+```
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    1 + 'one'
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+The interpreter throws a `TypeError`. The msg accompanying the error is more suggestive: an int and string can't be added.
+
+```py
+print('There is no problem with this line')
+print(x ** 2)
+```
+
+Output:
+```
+There is no problem with this line
+Traceback (most recent call last):
+  File "main.py", line 2, in <module>
+    print(x ** 2)
+NameError: name 'x' is not defined
+```
+
+It is the second line which has a problem. `NameError` occurs when we try to reference a variable that has not been defined before.
