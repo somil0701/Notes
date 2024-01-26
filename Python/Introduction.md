@@ -126,3 +126,146 @@ A comment is a line of text that is not executed by the interpreter. Comments be
 ```
 As line-2 is a comment, `1` is not printed in the next line.
 
+## Operators
+
+### Arithmetic
+The following table gives the symbols for arithmetic oeprators and the operations that they correspond to:
+| Operator | Operations     |
+| -------- | -------------- |
+| +        | Addition       |
+| -        | Subtraction    |
+| *        | Multiplication |
+| /        | Division       |
+| //       | Floor Division |
+| %        | Modulus        |
+| **       | Exponential    |
+
+- `//` is called the floor division operators. `x//y` gives the quotient when `x` is divided by `y`. For example, `8//3` is `2`.
+- `%` is called the modulus operator. `x % y` gives the remainder when `x` is divided by `y`. For example, `10 % 3` is `1`.
+- `**` is called the exponential operator. `x**y` returns x^y.
+- `/` and `//` are two different oeprators. `/` gives the complete result of the division, while `//` returns the quotient.
+
+### Relational
+|Operator | Operation                |
+|-------- |--------------------------|
+|>	      | greater than             |
+|<	      | less than                |
+|>=	      | greater than or equal to |
+|<=       | less than or equal to    |
+|==	      | double equal to          |
+|!=	      | not equal to             |
+
+- Relational Operators are also called comparison operators. The result of any comparison operation is a boolean value: `True` or `False`. It can also be assigned to a variable.
+```py
+>>> x = 10
+>>> y = 15
+>>> z = y > x
+>>> print(z)
+True
+```
+- `==` symbol corresponds to equality operator where as `=` refers to the assignment operator.
+
+### Logical
+| Operator | Opeation            |
+|----------|---------------------|
+| not      | negation            |
+| and      | logical conjunction |
+| or       | logical disjunction |
+
+- `and` and `or` are binary operators; not is a unary operator.
+
+## Expressions
+
+### Arithmetic Expression
+```py
+>>> 1 + 2
+3
+>>> type(1 + 2)
+<class 'int'>
+>>> 1.0 + 2
+3.0
+>>> type(1.0 + 2)
+<class 'float'>
+```
+
+- We see that the result is 3.0 which is of type `float`. So, `float` is more dominant than `int` as far as the addition operation is concerned. All the operations result in a `float` irrespective of the operator involved.
+
+### Precedence
+
+- The precedence rules for operators can given as per the following table. Those with higher precedence come at the top of the table. Operators in a given cell have the same precedence. For example, `+` and `-`
+
+| Operators       | Operation                                        |
+|-----------------|----------------------------------------------------|
+| \* *             | exponentiation                                    |
+| +X, -X          | unary +, unary -                                  |
+|                 | (positive sign), (negative sign)                  |
+| *, /, //, %     | multiplication, division, floor division, modulus |
+| +, -             | addition, subtraction                             |
+
+**The precedence goes from high to low**
+
+```py
+>>> 4 // 2 - 1
+1
+```
+
+### Order
+Python evaluates expressions from **left** to **right**. There are two exceptions to this rule, the `**` and `=` operator, both of which are evaluated from right to left.
+
+```py
+>>> 8 % 4 % 2
+0
+>>> 2 ** 3
+```
+
+### Boolean Expression
+Expressions that involve a relational operator will result in a `bool`.
+```py
+>>> 2 > 1
+True
+>>> type(2 > 1)
+<class 'bool'>
+```
+
+### Precedence and Order
+Similar to arithmetic operators, logical operators also have precedence. Boolean operators are also going to evaluated from left to right:
+
+| Operators |
+|-----------|
+| not       |
+| and       |
+| or        |
+
+**The precedence goes from high to low**
+
+```py
+>>> not True and False
+False
+```
+
+## Beaware of Float
+```py
+>>> 10.000000000000000000001 > 10
+False
+```
+- The reason this returns `False` in Python has to do with the way floating point numbers are represented. Python does not support arbitrary precision for represeting real numbers. When the number cannot be represented exactly, an approximate value is returned.
+
+```py
+>>> 0.1 * 3
+0.30000000000000004
+```
+
+- The problem is with the way `0.1` is represented in binary - it has a non-terminating, recurring sequence of bits after the decimal point. As the computer uses a finite no. of bits to represent data, this sequence will be truncated at some stage. This results in an approximate representation of `0.1`. For a more detailed explanation, refer to <ins>[THIS](https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/#:~:text=For%20example%2C%20in%20half%2Dprecision,which%20is%200.0999755859375%20in%20decimal.)
+
+## Short Circuit Evaluation
+```py
+>>> True or (1/0)
+True
+```
+The expression is evaluated from left to right. The operator is `or`. Since the operand on the left is `True`, the whole expression will evaluate to `True` irrespective of the operand on the right. So, the interpreter skips evaluating the operand on the right. This behaviour is called short circuit evaluation.
+
+- Example:
+    ```py
+    >>> (not((3 > 2) or (5 / 0))) and (10 / 0)
+    False
+    ```
