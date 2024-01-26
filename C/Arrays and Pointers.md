@@ -206,3 +206,18 @@ For ex:
 `int *ptr`
 Here, we created a pointer but didn't give it any value, so it becomes a wild pointer.
 To avoid the bugs and errors it can cause in a program; we prefer to convert a void pointer to a NULL pointer.
+
+## Function Pointer
+In function pointers, the function name can be used to get the function address.
+`function_return_type(*Name_of_pointer)(function arguments list);`
+eg: `void (*func)(int, char);`
+
+Some important points regarding function pointer:
+- We can declare a function pionter and assign a function to it in a single statement like this:
+`void (*function_ptr)(int) = &fun;`
+- We can remove the & from this statement because a function name alone represents the function address.
+`void (*function_ptr) (int) = fun;`
+
+## Callback Function
+If a function's reference is passed to another function as an argument to call it, it will be called a Callback function.
+`void fileDownload (const char *file, void (*callback_function)(int statusCode));`
