@@ -332,3 +332,153 @@ NameError: name 'x' is not defined
 ```
 
 It is the second line which has a problem. `NameError` occurs when we try to reference a variable that has not been defined before.
+
+## Strings
+
+### Quotes: single, double and triple
+A string is any sequence of characters enclosed within single or double quotes.
+
+Example of a Multi-Line String:
+```py
+x = '''first line
+second line
+third line'''
+print(x)
+```
+
+### Length
+The length of a string is the number of characters in it. Python provides a built-in function called `len` to find the length of a string:
+```py
+x = 'good'
+print(len(x))
+```
+
+- Note: Python doesn't have a separate data type for characters. A character in Python is represented by a string of length 1.
+
+We can also define empty strings in python:
+```py
+x = ''
+print(len(x))
+```
+The length of the empty string is 0.
+
+### Operations on Strings
+#### Concatenation
+We can concatenate two strings using `+` operator. Concatenation is just a fancy term for joining two strings together:
+```py
+string1 = 'first'
+string2 = ','
+string3 = 'second'
+string4 = string1 + string2 + string3
+print(string4)
+```
+Output: 
+```py
+first,second
+```
+
+#### Replication
+We can make multiple copies of a string and string them all together using the `*` operator:
+```py
+s = 'good'
+five_s = s * 5
+print(five_s)
+```
+Output: 
+```py
+goodgoodgoodgoodgood
+```
+
+#### Comparison
+We can compare two strings with `==` operator.
+```py
+x = 'python'
+print(x == 'python', x == 'nohtyp')
+```
+
+Output:
+```py
+True False
+```
+
+- Two strings are equal if and only if both of them represent exactly the same sequence of characters.
+
+```py
+print('good' > 'bad')
+print('nine' < 'one')
+print('a' < 'ab' < 'abc' < 'b') # Very Important
+```
+
+Output:
+```py
+True
+True
+True
+```
+
+- Note: It is clear from the above examples that the length of the string is not a metric used by Python to compare strings. Instead, Python uses the familiar alphabetical ordering to compare two strings(lexicographic ordering).
+
+- Lexicrographical ordering for string uses the Unicode code point number to order individula characters.
+
+- Python provides a built-in function called `ord` that returns the code point of any given character. For eg:
+
+```py
+print(ord('a'), ord('b'))
+print(ord('a'), ord('A'))
+```
+
+Output:
+```py
+97 98
+97 65
+```
+
+### Escape characters
+In python, the backslash - `\` - is called the escape character. One of its uses is to represent certain white-space characters such as tabs and new lines.
+
+- `\n` is a new line character. Its effect is to introduce a new line.
+Note: \n is still regarded as a single character
+
+```py
+x = print('This is the first sentence.\nThis is the second sentence.')
+```
+Output:
+```py
+This is the first sentence.
+This is the second sentence.
+```
+
+- `\t` is used for giving indent of a block.
+- `\'` is used for escaping quotes.
+
+### Substrings
+A string is a substring of another string if the first string is contained in the second. For eg: `'good'` is a substring of `'very good'`.
+
+- Python provides a keyword - `in` - which can be used to check if a given string is a substring of another string.
+
+```py
+a = 'good'
+b = 'very good'
+present = a in b
+print(present)
+not_present = b in a
+print(not_present)
+```
+
+Output:
+```py
+True
+False
+```
+
+- `in` is a powerful keyword. It can also be usd along with `not` in the follwing manner:
+```py
+a = 'abc'
+b = 'ab'
+print(a not in b)
+```
+
+Output:
+```py
+True
+```
