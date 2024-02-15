@@ -260,3 +260,212 @@ The pattern attribute specifies a regular expression that the input must match t
 ```html
 <input type="text" pattern="[a-zA-Z0-9]+">
 ```
+
+## HTML Lists
+
+### Types of HTML Lists
+- Unordered List: Displays items using bullets.
+- Ordered List: Displays items in a numerical sequence, and supports various numbering styles like Arabic numerals, Roman numerals, and so on.
+- Definition List: Organizes items in a format similar to a dictionary, with terms and their corresponding definitions.
+
+### Unordered List
+```html
+<ul>
+  <li>Pen</li>
+  <li>Pencil</li>
+  <li>Eraser</li>
+</ul>
+```
+
+Output:
+- Pen
+- Pencil
+- Eraser
+
+Types: disc, square and circle(type attribute)
+
+### Ordered List
+```html
+<ol>
+  <li>Mango</li>
+  <li>Orange</li>
+  <li>Litchi</li>
+</ol>
+```
+
+Output:
+1. Mango
+2. Orange
+3. Litchi
+
+### Definition List
+```html
+  <h1>HTML Definition List</h1>
+  <dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language: The standard language for creating web pages.</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets: A stylesheet language used for describing the look and formatting of a document written in HTML.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>A programming language commonly used in web development to add interactive features.</dd>
+  </dl>
+```
+
+Here, 
+- `<dl>` is the container for the list
+- `<dt>` defiens the terms that you want to explain
+- `<dd>` contains the definition or explanations for the terms.
+
+## Video and Audio Tags
+
+### The &lt;video&gt; Tag
+The &lt;video&gt; is used to embed video files in an HTML document. It supports multiple attributes to control the video playback.
+```html
+<video src="video.mp4" controls></video>
+```
+
+Attributes for &lt;video&gt; Tag
+- src: Specifies the path to the video file.
+- controls: Adds video controls, like play, pause, and volume.
+- autoplay: Automatically starts playing the video when the page loads.
+- loop: Repeats the video once it ends.
+- muted: Mutes the video by default.
+- poster: Specifies an image to be displayed before the video starts playing.
+- width and height: Specifies the dimensions of the video.
+
+### The &lt;audio&gt; Tag
+The &lt;audio&gt; tag is used to embed audio files in an HTML document. It also supports multiple attributes for control.
+Ex:
+```html
+<audo src="audio.mp3" controls></audio>
+```
+
+Attributes for &lt;audio&gt; Tag
+- src: Specifies the path to the audio file.
+- controls: Adds audio controls, like play, pause, and volume.
+- autoplay: Automatically starts playing the audio when the page loads.
+- loop: Repeats the audio once it ends.
+- muted: Mutes the audio by default.
+- preload: Specifies if and how the audio should be loaded when the page loads ('auto', 'metadata', 'none').
+
+## SVG in HTML
+SVG stands for Scalable Vector Graphics. Unlike raster images, SVGs are non-pixel-based.
+
+```html
+<svg height="100" width="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+```
+
+## iFrames in HTML
+An iFrame is an HTML element that enables an inline frame for the embedding of external content. Essentially, you can load another web page within a designated area of your current webpage.
+
+```html
+<iframe src="URL" width="width" height="height"></iframe>
+```
+
+## Code Tag in HTML
+The &lt;code&gt; tag is a semantic HTML tag that's used for displaying coding snippets. It can be both inline and within a block-level element like &lt;pre&gt;
+
+```html
+<pre><code>Your Multiline code here</code></pre>
+```
+
+## HTML Semantic tags
+Semantic tags add meaning to your HTML.
+Here are some of the key semantic tags you must know about:
+
+- &lt;header&gt;: Used to represent the top section of a web page, often containing headings, logos, and navigation.
+
+- &lt;nav&gt;: Signifies a navigation menu on a web page.
+
+- &lt;article&gt;: Indicates a self-contained piece of content, such as a blog post or news article.
+
+- &lt;section&gt;: Represents a thematic grouping of content on a web page.
+
+- &lt;aside&gt;: Typically used for sidebars or content that is tangentially related to the main content.
+
+- &lt;footer&gt;: Represents the footer of a web page, usually containing copyright information and contact details.
+
+- &lt;figure&gt; and &lt;figcaption&gt;: Used for embedding images, diagrams, or charts, along with a caption.
+
+- &lt;main&gt;: Signifies the main content area of a web page.
+
+- &lt;time&gt;: Used to represent time-related information, like dates and times.
+
+They enhance SEO, improve accessibility, and make your code easier to read and maintain.
+
+Examples:
+Using the &lt;header&gt; tags and &lt;footer&gt; tags
+```html
+<header>
+    <h1>My Website</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<footer>
+    <p>Copyright 2023</p>
+</footer>
+```
+
+Using the &lt;article&gt; and &lt;section&gt; tags
+```html
+<article>
+    <h2>Article Title</h2>
+    <section>
+      <p>Content here</p>
+    </section>
+</article>
+```
+
+Using the &lt;aside&gt; and &lt;nav&gt; tags
+```html
+<aside>
+    <p>This is an aside content</p>
+  </aside>
+<nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+    </ul>
+</nav>
+```
+
+Using the &lt;figure&gt; and &lt;figcaption&gt; tags
+```html
+<figure>
+    <img src="image.jpg" alt="An example image">
+    <figcaption>This is an example image.</figcaption>
+</figure>
+```
+
+## HTML Entities
+
+### Common HTML Entities
+```
+&lt;  for <
+&gt;  for >
+&amp; for &
+&nbsp; for a non-breaking space
+&copy; for ©
+```
+
+## HTML Quotation Tag
+The &lt;blockquote&gt; and &lt;q&gt; tags serve to define quotations in HTML. While &lt;blockquote&gt; is used for longer, block-level quotes, &lt;q&gt; is used for shorter, inline quotes.
+
+Basic Syntax:
+```html
+<blockquote cite="source-url">
+  Quotation text here.
+</blockquote>
+<q cite="source-url">Quotation text here.</q>
+```
