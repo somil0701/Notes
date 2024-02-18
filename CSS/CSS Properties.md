@@ -446,3 +446,128 @@ Generally we only use pixels to set dimensions of an element
 5. vw - Relative to 1% of the width of the viewport. (Viewport is the area of the website visible to the user).
 6. vh - Relative to 1% of the height of the viewport.
 7. % - Relative to the parent element's size.
+
+## CSS List Styles
+
+### Unordered List Styling
+```css
+ul {
+    list-style-type: value;
+}
+```
+The value can be
+- disc: (default) - Filled circle marker
+- circle
+- square
+- none
+
+### Ordered List Styling
+```css
+ol {
+    list-style-type: value;
+}
+```
+The value can be:
+1. decimal
+2. decimal-leading-zero
+3. lower-roman
+4. upper-roman
+5. lower-alpha
+6. upper-alpha
+
+### List-style position
+This property determines where the list markers(bullets or numbers) areplaced in relation to the content.
+It has two values:
+- inside: (default) list markers are inside the content's box.
+- outside: list markers are outside the content's box, typically to the left of the content, creating a hanging indent effect.
+
+## CSS Overflow
+### Overflow Hidden
+It hides the content which doesn't fit the box.
+```css
+div {
+            background-color: rebeccapurple;
+            width: 200px;
+            height: 60px;
+            border: 2px solid;
+            overflow: hidden;
+        }
+```
+
+### Overflow Scroll
+It adds an automatic scroller in the container so for the seeing the content it can be scrolled without affecting the container dimensions.
+```css
+div {
+            background-color: rebeccapurple;
+            width: 200px;
+            height: 60px;
+            border: 2px solid;
+            overflow: scroll;
+        }
+```
+
+### Overflow Auto
+It is quite similar to scroll but the scroller is only added when the content starts getting out of the container.
+
+## CSS Positioning
+It helps to determine how elements are placed inside the container element and how they interact with the other elements on th epage.
+There are various types of position property values, such as:
+
+### Static(Default)
+The elements are positioned according to the normal flow of the document
+```css
+selector{
+    position: static;
+}
+```
+
+### Relative
+Elements are positioned relative to the normal position in the document.
+You can use the top, right, bottom, and left properties to move the element from its original position.
+```css
+selector{
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+```
+
+### Absolute
+Elements are positioned relative to the closest positioned ancestor(parent), which means we need to have a parent element with a positioning other than 'static'.
+Note: An absolutely positioned element is removed from the normal flow.
+```css
+#about{
+    position: relative;
+}
+.logo{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+```
+
+### Fixed
+Elements are positioned relative to the viewport (screen) and do not move when the page is scrolled.
+This is useful for creating elements like fixed headers or footers.
+```css
+h1{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+```
+
+### Float
+The float property is used to shift an element to the left or right within it's containing element.
+
+### Sticky
+Position sticky is a hybrid between 'relative' and 'fixed'.
+It allows an element to become "stuck" to the top or bottom of its container when scrolling, but it behaves like relative positioning within the container until it reaches a specified offset.
+```css
+h1{
+    position: sticky;
+    top: 10px;
+    right: 20px;
+}
+```
+
