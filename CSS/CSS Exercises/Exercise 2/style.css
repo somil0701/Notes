@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.image{
+    width: 1vw;
+    height: 1vh;
+    position: relative;
+}
+
+.card{
+    border: 2px solid black;
+    margin-top: 40vh;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    margin-bottom: 10vh;
+    padding: 20px;
+}
+
+
