@@ -426,3 +426,23 @@ It gives external spacing and differentiates two or more elements.
     border: 2px solid red;
 }
 ```
+
+## CSS Sizing Properties
+
+### Absolute Units
+1. cm
+2. mm
+3. in
+4. pt
+5. pc
+6. px
+Generally we only use pixels to set dimensions of an element
+
+### Relative Units
+1. em - Relative to the font size of the parent element. eg. %em means the size would be 5 times the current font size.
+2. ex - Relative to X height of the existing font.
+3. ch - Relative to the width/radius of the character "0".
+4. rem - Relative to the font size of the root element.
+5. vw - Relative to 1% of the width of the viewport. (Viewport is the area of the website visible to the user).
+6. vh - Relative to 1% of the height of the viewport.
+7. % - Relative to the parent element's size.

@@ -121,3 +121,40 @@ selector{
 }
 ```
 
+## CSS Specificity
+It is a value or weight assigned to a CSS selector. The higher the specificity, the more precedence the selector has.
+
+### The Cascade Algorithm
+It is an algorithm meant for solving conflicts where multiple CSS rules apply to an HTML element.
+
+Stages of Cascade Algorithm:
+1. Position and order of appearance
+2. Specificity
+3. Origin
+4. Importance
+
+- Effect of Position
+If there are two rules that have selectors of identical specificity, the last one declared won.
+
+- Specificity
+The order of specificity is:
+<b>Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector</b>
+
+- Specificity Calculation
+To calculate specificity, assign a value to each part of the selector:
+    - Universal Selector: 0
+    - Element Selectors and pseudo-elements: 1
+    - Class selectors, attribute selectors, and pseudo-classes: 10
+    - ID Selectors: 100
+    - Inline Styles: 1000
+
+```css
+<h1 id="title" class="h1">Somil</h1>
+```
+
+Here the specificity value will be 111, because ID has a specificity of 100, the class has a specificity of 10, and the h1 element has a specificity of 1.
+
+- Importance
+The !importance flag in CSS is used to give a particular style rule the highest level of importance, overriding any competing styles. It has a specificity score of <b>10,000 points</b>.
+
+
