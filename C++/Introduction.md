@@ -116,3 +116,23 @@ int main()
     return 0;
 }
 ```
+
+## Introduction to iostream: cout, cin and endl
+
+### The input/output library
+The io part of iostream stands for input/output.
+
+### std::cout
+It allows us to send data the the console to be printed as text. cout stands for "character output".
+
+Inside our main function, we use std::cout along with the <b>insertion operator (`<<`)</b>, to send the text to the console.
+
+### std::endl
+std::endl prints a newline character to the console(causing the cursor to go to the start of the next line). In this context, endl stands for "end line".
+
+### std::endl vs '\n'
+Using std::endl can be a bit inefficient, as it actually does two jobs: it moves the cursor the the next line of the console, and it flushes the buffer.
+Because of this, use of the '\n' character is typically preferred instead.
+
+### std::cin
+`std::cin` reads input from keyboard using the <b>extraction operator (`>>`)</b>. The input must be stored in a variable to be used.
