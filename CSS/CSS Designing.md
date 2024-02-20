@@ -24,3 +24,14 @@ This property is quite similar to inline but dimension proeprties are allowed in
 
 ### Display None & Hidden
 This proeprty removes the element from the document, clearing the space taken by the element. When the display is hidden, thought the element isn't visible the space is still taken by the element.
+
+## CSS Media Queries
+Media queries help to add responsiveness to the website by adding breakout points or when only a certain condition is true.
+
+```css
+@media only screen and (max-width:800px){
+    p{
+        color: yellowgreen;
+    }
+}
+```

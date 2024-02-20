@@ -1,0 +1,38 @@
+*{
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(189, 245, 246);
+}
+
+:root{
+    --primary_color: #5baafc;
+    --secondary_color:  #f7faff;
+}
+
+.navbar{
+    margin-top: 10px;
+    border: 5px solid rgba(236, 211, 211, 0.662);
+    border-radius: 20px;
+}    
+
+.navbar ul{
+    color: var(--secondary_color);
+    background-color: var(--primary_color);
+    display: flex;
+    list-style-type: none;
+}
+
+li{
+    padding: 10px;
+}
+
+.logo{
+    padding-left: 30px;
+    font-size: 20px;
+    padding-right: 1000px;
+}
