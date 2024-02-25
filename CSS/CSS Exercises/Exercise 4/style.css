@@ -28,6 +28,7 @@ ul li{
     padding-right: 475px;
     font-family: "Poppins";
     font-size: 20px;
+    font-weight: bold;
 }
 
 .subname{
@@ -132,10 +133,22 @@ img{
     border: 1px solid black;
     margin-left: 1300px;
     border-radius: 40px;
+    top: 0;
+}
+
+.icon{
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
+    display: inline-block;
 }
 
 footer{
     background-color: rgb(139, 219, 27);
     font-family: "Baloo 2", sans-serif;
     padding: 25px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
