@@ -482,3 +482,82 @@ Output:
 ```py
 True
 ```
+
+### Indexing
+A string is a sequence of characters. Sequences support indexing. The "index" is just a formal way of denoting the position of an element in the sequence. Here, we use <u>zero-based-numbering</u>
+
+```py
+word = 'world'
+print(word[0])
+print(word[1])
+print(word[2])
+print(word[3])
+print(word[4])
+```
+
+Output:
+```py
+w
+o
+r
+l
+d
+```
+
+Consider this following code:
+```py
+word = 'world'
+print(word[5])
+```
+
+The interpreter throws an `IndexError` as we are trying to access an index that is out of range. The length of the string is `5`. Since we start the index from `0`, the last character will be at index `4`.
+
+Python also supports negative indexing.
+An index of `-1` points to the last element in the sequence. From this, we keep moving backwards until we reach the first element in the sequence which is at the index `-5`.
+
+### Slicing
+Consider this piece of code
+```py
+email = "CS_10_014@iitm.ac.in"
+roll = email[6:9]
+print(roll)
+```
+
+The slicing operator - `start:stop` - will be our knife in slicing sequences! The substring that we want to extract is `014`.
+
+### Immutability
+Consider the follwing code:
+```py
+word = 'some string'
+word[0] = 'S'
+```
+
+The interpreter throws a `TypeError` witht he following error message: `'str' object does not support item assignment.` We say that something is "mutable" if it can be changed, modified. Therefore, an object is immutable if it cannot be changed or modified.
+Strings are <b>immutable</b>. One or more characters in the string literal present in `word` cannot be modified <b>in-place</b>.
+
+Consider this:
+```py
+word = 'some string'
+word = 'Some string'
+```
+
+Here, we are not modifying the variable `word` in-place. Instead, we are assigning it an entirely new string literal in line-2.
+
+### Methods
+```py
+sentence = input()
+cap_sentence = sentence.capitalize()
+print(cap_sentence)
+```
+`capitalize` is called a method. Methods are essentialy functions, but they are defined for specific objects. So, they have to be called by using the object for which they have been defined. In the case of `capitalize`, it is a method that is defined for the `str` data type. If we try to call it using an `int` object, will get an error.
+
+`sentence.capitalize()` returns a string, which is then assigned to a new variable called `cap_sentence`.
+
+Similar `isalpha()` checks for the name if it has only alphabets without any special characters and numbers.
+
+```py
+valid = name.isalpha()
+print(valid)
+```
+
+`name.isalpha()` returns a boolean value. If every character in the string is an alphabet and the string is non-empty, it returns `True`, and `False` otherwise.
