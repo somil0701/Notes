@@ -164,3 +164,73 @@ int my_function_name(); // conventional
 int myVariableName;   // conventional
 int myFunctionName(); // conventional
 ```
+
+## Whitespace and basic formatting
+### Whitespace
+<b>Whitespace</b> is a term that refers to characters that are used for formatting purposes. In C++, this refers primarily to spaces, tabs, and new lines.
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello World" << endl;
+
+    return 0;
+}
+```
+
+### Basic Formatting
+```cpp
+cost          = 57;
+pricePerItem  = 24;
+value         = 5;
+numberOfItems = 17;
+
+int main()
+{
+    std::cout << "This is a really, really, really, really, really, really, really, "
+        "really long line\n"; // one extra indentation for continuation line
+
+    std::cout << "This is another really, really, really, really, really, really, really, "
+                 "really long line\n"; // text aligned with the previous line for continuation line
+
+    std::cout << "This one is short\n";
+}
+```
+
+## Introduction to literals and operators
+### Literals
+A <b>literal</b>(also known as a <b>literal constant</b>) is a fixed value that has been inserted directly into the source code.
+
+### Operators
+An <b>operation</b> is a process involving zero or more input values(called <b>operands</b>) that produces a new value (called an output value). The specific operation to be performed is denoted by a symbol called an <b>operator</b>.
+
+Types of Operators:
+- Unary (single operands)
+- Binary (two operands)
+- Ternary (uses 3 operands {conditional})
+- Nullary (acts on zero operands)
+
+### Return values and side effects
+An operator(or function) that has some observable effect beyond producing a reutrn value is said to have a <b>side effect.</b>
+
+Both `=` and `<<` (when used to output values to the console) return their left operand.
+
+## Introduction to expressions
+### Expressions
+An <b>expressions</b> is a sequence of literals, variables, operators, and function calls that calculates a single value. The process of executing an epxression is called <b>evaluation</b>, and the single value produced is called the <b>result</b> of the epxressions.
+
+Examples,
+```cpp
+2               // 2 is a literal that evaluates to value 2
+"Hello world!"  // "Hello world!" is a literal that evaluates to text "Hello world!"
+x               // x is a variable that evaluates to the value of x
+2 + 3           // operator+ uses operands 2 and 3 to evaluate to value 5
+five()          // evaluates to the return value of function five()
+```
+
+`type identifier { expression };`
+
+### Expressions statements
+An <b>expression statement</b> is a statement that consists of an expression followed by a semicolon.
