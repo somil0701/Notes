@@ -136,3 +136,31 @@ Because of this, use of the '\n' character is typically preferred instead.
 
 ### std::cin
 `std::cin` reads input from keyboard using the <b>extraction operator (`>>`)</b>. The input must be stored in a variable to be used.
+
+## Keywords and naming identifiers
+### Keywords
+C++ reserves a set of 92 words for its own use. These words are called <b>keywords</b> and each of the keywords has a special meaning within the C++ Language.
+
+### Identifier naming rules
+- The identifier can not be a keyword. Keywords are reserved.
+- The identifier can onlly be composed of letters, numbers, and the userscore character(no whitespaces and symbols).
+- The identifier must begin with a letter or an underscore. It can not start with a number.
+- C++ is case sensitive.
+
+### Identifier naming best practicies
+```cpp
+int value;  // conventional
+
+int Value;  // no
+int VALUE;  // no
+int VaLuE;  // no
+```
+
+For Multi-Words:
+```cpp
+int my_variable_name;   // conventional
+int my_function_name(); // conventional
+
+int myVariableName;   // conventional
+int myFunctionName(); // conventional
+```
