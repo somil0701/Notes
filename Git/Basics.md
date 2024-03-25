@@ -14,7 +14,7 @@ git config --global user.email "[valid-email]"
 ```
 ```bash
 git config --global color.ui auto
-set automatic command line coloring for Git for easy reviewing
+# set automatic command line coloring for Git for easy reviewing
 ```
 
 ## SETUP & INIT
