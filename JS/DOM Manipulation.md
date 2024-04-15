@@ -48,3 +48,33 @@ Same idea, but returns a collection of matching elements.
 - nextSibling
 - previousSibling
 - style
+
+## Events
+Responding to user inputs and actions!
+
+- clicks
+- drags
+- drops
+- hovers
+- scrolls
+- form submission
+- key presses
+- focus/blur
+- mouse wheel
+- double click
+- copying
+- pasting
+- audio start
+- screen resize
+- printing
+
+## addEventListener
+Specify the event type and a callback to run
+
+```js
+const button = document.querySelector('h1');
+
+button.addEventListener('click', () => {
+    alert("You clicked me!!");
+})
+```
